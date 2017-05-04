@@ -9,8 +9,8 @@ class RandomTest < Minitest::Test
   end
 
   def test_sort
-  
     assert_equal([], sort([]))
+    assert_equal([1], sort([1])) 
   end
 
 end
