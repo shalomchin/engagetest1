@@ -3,7 +3,7 @@ require 'minitest/autorun'
 class RandomTest < Minitest::Test
 
   def sort(array)
-    if array == []
+    if array == [] || array = [1]
       return array
     end
   end
