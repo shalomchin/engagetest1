@@ -35,4 +35,16 @@ def checksorted(array)
   print array
   puts array
 end
-checksorted([1])
+
+def sortmore(array)
+  i = 0 
+  until i > array.length-2 do  
+if array[i] > array[i+1] then
+array[0], array[1] = array[1], array[0]
+end
+  end
+
+print array
+return array
+end
+sortmore([2,1])

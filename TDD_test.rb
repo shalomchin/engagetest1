@@ -8,6 +8,7 @@ def sort(array)
     
     if array[i] > array[i+1] then
     #if not sorted, must sort
+    array[i], array[i+1] = array[i+1], array[i]
       print array  
     else
       break
