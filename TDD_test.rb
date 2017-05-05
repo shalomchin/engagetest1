@@ -2,22 +2,28 @@ require 'minitest/autorun'
 
 class RandomTest < Minitest::Test
 
-def sort(array)
-  i = 0
-  until i > array.length-2 do
-    
-    if array[i] > array[i+1] then
-    #if not sorted, must sort
-    array[i], array[i+1] = array[i+1], array[i]
-      print array  
-    else
-      break
+  def sort(array)
+    (array.length-1).times do |a|
+      i = 0
+      n = array.length-2
+
+      begin
+        if array == [] || array == [1]
+          break
+        elsif array[i] > array[i+1] then
+
+          array[i], array[i+1] = array[i+1], array[i]
+
+          next
+
+        end
+
+        i+= 1
+      end until i > n
     end
-    i +=1
+    print array
+    return array
   end
-  # print array
-  return array
-end
 
 
   def test_sort
@@ -26,6 +32,7 @@ end
     assert_equal([1,2], sort([2,1]))
     assert_equal([1,2,3], sort([1,2,3]))
     assert_equal([1,2,3], sort([2,1,3]))
+    assert_equal([1,2,3], sort([1,3,2]))
   end
 
 end
