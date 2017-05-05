@@ -24,6 +24,7 @@ end
     assert_equal([], sort([]))
     assert_equal([1], sort([1]))
     assert_equal([1,2], sort([2,1]))
+    assert_equal([1,2,3], sort([1,2,3]))
   end
 
 end
