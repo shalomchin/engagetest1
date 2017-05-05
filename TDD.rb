@@ -24,27 +24,27 @@ def checksorted(array)
   until i > array.length-2 do
     # print array[i]
     if array[i] > array[i+1] then
-    
+    array[i], array[i+1] = array[i+1], array[i]
       print array
       
     else
+      print array
       break
     end
     i +=1
   end
-  print array
-  puts array
+ 
 end
 
-def sortmore(array)
-  i = 0 
-  until i > array.length-2 do  
-if array[i] > array[i+1] then
-array[0], array[1] = array[1], array[0]
-end
-  end
+# def sortmore(array)
+#   i = 0 
+#   until i > array.length-2 do  
+# if array[i] > array[i+1] then
+# array[i], array[i+1] = array[i+1], array[i]
+# end
+#   end
 
-print array
-return array
-end
-sortmore([2,1])
+# print array
+# return array
+# end
+checksorted([1,2,3])
